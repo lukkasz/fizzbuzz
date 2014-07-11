@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	$('.btn').on('click', function(){
 
-		var number = +$('#number').val();
+		var $number = $('#number');
 		
 		
 		var fizzBuzz = function ( num ) {
@@ -22,13 +22,13 @@ $(document).ready(function(){
 			return rez;
 		};
 
-		if(number) {
-			fizzBuzz(number);
+		if(+$number.val()) {
+			fizzBuzz($number.val());
 		} else {
 			alert("Please enter an number!");
 		}
 		
-		
+		$number.val('');
 		
 	});
 	
